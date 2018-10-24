@@ -40,7 +40,7 @@ def directory_check(path):
         return factory.directory_check(path)
     except KeyError:
         if not os.path.exists(path):
-            os.makedirs(path)
+            os.makedirs(path, exist_ok=True)
 
 
 def open_file(path):
